@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>COLLATE</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+        <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+
+        <script>
+            var userAgent = navigator.userAgent + '';
+            if (userAgent.indexOf('iPhone') > -1) {
+                document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+                var mobile_system = 'iphone';
+            } else if (userAgent.indexOf('Android') > -1) {
+                document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+                var mobile_system = 'android';
+            } else {
+                var mobile_system = '';
+            }
+        </script>
+
+        <script src="js/lib/jquery.js"></script>
+        <!-- your scripts here -->
+        <script src="js/app/app.js"></script>
+        <script src="js/app/bootstrap.js"></script>
+        <script src="js/lib/jquery.mobile.js"></script>
+        <style>
+            .ui-selectmenu.ui-popup .ui-input-search {
+                margin-left: .5em;
+                margin-right: .5em;
+            }
+            .ui-selectmenu.ui-dialog .ui-content {
+                padding-top: 0;
+            }
+            .ui-selectmenu.ui-dialog .ui-selectmenu-list {
+                margin-top: 0;
+            }
+            .ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
+                border-top-width: 1px;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+            }
+            .ui-selectmenu.ui-dialog .ui-header {
+                border-bottom-width: 1px;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div data-role="page" id="landingPage" style="background: white">
+
+            <div data-role="header" style="text-shadow: none">
+                <h1>EC</h1>
+                <a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
+            </div><!-- /header -->
+            <img src="sh.jpg" style="width:90%; height: 5%;" />
+            <div data-role="content" style="text-shadow: none">
+
+                <a href="#declareRegions" data-transition="slidedown"  data-role="button" data-transition='slide'>
+                    Declare
+                </a>
+                <a href="#resultRegions" data-transition="slidedown"  data-role="button" data-transition='slide'>
+                    Results
+                </a>
+                
+            </div><!-- /content -->
+
+        </div><!-- /page -->
+
+                <div data-role="page" id="declareRegions" style="background: white">
+
+            <div data-role="header" style="text-shadow: none">
+                <h1>Declare Regions</h1>
+                <a href="index.html" data-role="button" data-transition="slideup" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+            </div><!-- /header -->
+
+            <div data-role="content" style="text-shadow: none">
+               <select id="filter-menu" data-native-menu="false">
+                   <option value="SFO" >Greater Accra </option>
+                   <option value="LAX" > Ashanti</option>
+                   <option value="YVR" > Eastern</option>
+                   <option value="YYZ" >Western </option>
+                   <option value="MPR" > Central</option>
+                   <option value="THZ" >Upper West </option>
+                   <option value="LLM" >Upper East </option>
+                </select>
+                <select id="filter-menu" data-native-menu="false">
+                   <option value="SFO" >Constituency 1 </option>
+                   <option value="LAX" > Constituency 2</option>
+                   <option value="YVR" > Constituency 3</option>
+                   <option value="YYZ" >Constituency 4 </option>
+                   <option value="HYU" > Constituency 5</option>
+                   <option value="SHE" >Constituency 6 </option>
+                   <option value="HEU" >Constituency 7</option>
+                </select>
+               <label>NJM</label>
+                <input type ="text" placeholder="New Juducious Men" name="NJM"/>
+                <label>NUH</label>
+                <input type ="text" placeholder="New Unstructured Hub" name="NUH"/>
+                <label>EWP</label>
+                <input type ="text" placeholder="Everlasting Winning People" name="EWP"/>
+                
+
+            </div><!-- /content -->
+        </div><!-- /page -->
+        
+            <div data-role="page" id="resultRegions" style="background: white">
+
+            <div data-role="header" style="text-shadow: none">
+                <h1>Results</h1>
+                <a href="index.html" data-role="button" data-transition="slideup" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+            </div><!-- /header -->
+            <img src ="cap.jpg" style=" width:100%; height:10%;">
+            <div data-role="content" style="text-shadow: none">
+                <h3>NJM :</h3> 20
+                <h3>NUH :</h3> 30
+                <h3>EWP :</h3> 10000
+
+             
+            </div><!-- /content -->
+        </div><!-- /page -->
+    </body>
+    
+</html>
