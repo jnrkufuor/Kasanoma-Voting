@@ -15,6 +15,8 @@
 
         });
     };
+    }
+        
     function onPhototDataSuccess(imageData)
     {
         var smallImage = document.getElementById('smallImage');
